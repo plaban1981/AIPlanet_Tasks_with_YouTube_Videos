@@ -20,9 +20,9 @@ import os
 from time import time, sleep
 
 #
-from configparser import ConfigParser
+#from configparser import ConfigParser
 #
-ai_for_world_config = ConfigParser()
+#ai_for_world_config = ConfigParser()
 #
 tokenizer = tiktoken.get_encoding('cl100k_base')
 #
@@ -70,15 +70,15 @@ def gpt3turbo(prompt):
 
 
 #
-def read_config(parser: ConfigParser, location: str) -> None:
-    assert parser.read(location), f"Could not read config {location}"
+#def read_config(parser: ConfigParser, location: str) -> None:
+#    assert parser.read(location), f"Could not read config {location}"
 #
-"""
-model_path = "./model_files"
-CONFIG_FILE = os.path.join(model_path, "env.conf")
-read_config(ai_for_world_config, CONFIG_FILE)
-api_key = ai_for_world_config.get("openai", "api_key").strip()
-"""
+#
+#model_path = "./model_files"
+#CONFIG_FILE = os.path.join(model_path, "env.conf")
+#read_config(ai_for_world_config, CONFIG_FILE)
+#api_key = ai_for_world_config.get("openai", "api_key").strip()
+#"""
 #  
 api_key = st.secrets["API_KEY"]
 openai.api_key = api_key
